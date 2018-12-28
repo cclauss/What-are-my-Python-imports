@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 
 # TODO: This is NOT an exhaustive list but works for one particular project
-STD_LIB = """ConfigParser Cookie HTMLParser Queue StringIO __future__ argparse
-    array atexit
+STD_LIB = """ConfigParser Cookie HTMLParser Queue StringIO __future__
+argparse array atexit
 base64 bz2
 cPickle cStringIO calendar cgi codecs collections compress cookielib copy csv
 datetime doctest
