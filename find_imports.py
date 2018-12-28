@@ -2,8 +2,9 @@
 
 # Steps tested on macOS:
 # 1. cd to the root of you Python project
-# 2. grep -r import . > files.txt
-# 3. python3 find_imports.py
+# 2. run flake8 --select=E401 and fix all files that fail this test
+# 3. grep -r import . > files.txt
+# 4. python3 find_imports.py
 
 # TODO: This is NOT an exhaustive list but works for one particular project
 # Criteria: f"https://docs.python.org/2/library/{x.lower()}.html" page exists
