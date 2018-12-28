@@ -36,6 +36,7 @@ data_provider
 db
 db_read
 dbhash
+dev
 driver
 dump
 dynlinks
@@ -59,6 +60,7 @@ import
 import_edition_builder
 import_opds
 import_rdf
+infogami
 iprange
 iptools
 isbnlib
@@ -93,6 +95,7 @@ olcompress
 oldb
 olwrite
 onix
+openlibrary
 parse
 plugins
 pool
@@ -110,6 +113,7 @@ readableurls
 readlinks
 recentchanges
 requests
+reviewsources
 schema
 selenium
 setuptools
@@ -125,6 +129,7 @@ stopword
 thread_utils
 update_work
 urlcache
+us
 utils
 warc
 web
