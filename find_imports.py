@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 
+# Steps tested on macOS:
+# 1. cd to the root of you Python project
+# 2. grep -r import . > files.txt
+# 3. python3 find_imports.py
+
 # TODO: This is NOT an exhaustive list but works for one particular project
+# Criteria: f"https://docs.python.org/2/library/{x.lower()}.html" page exists
 STD_LIB = """ConfigParser Cookie HTMLParser Queue StringIO __future__
 argparse array atexit
 base64 bz2
@@ -16,16 +22,17 @@ logging
 math md5 mimetypes
 numbers
 optparse os
-pdb pydoc random
+pdb pprint pydoc random
 re
 sched sendmail shelve shlex shutil site socket stat string subcommand
     subprocess sys
-tempfile threading time traceback types
-unicodedata unittest urllib urllib2 uuid
+tarfile tempfile threading time traceback types
+unicodedata unittest urllib urllib2 urlparse uuid
 warnings
 xml
 zlib""".split()
 
+# Sorry.  The following code in not very readable.
 with open('files.txt') as in_file:
     lines = (line.strip().partition('.py:') for line
              in in_file.read().splitlines())
