@@ -40,7 +40,5 @@ lines = (c.strip().replace(',', ' ').replace('.', ' ') for a, b, c in lines
          if b and c.startswith(('from ', 'import '))
          and not a.startswith('scripts/20'))
 lines = sorted(set(line.split()[1] for line in lines
-                   if line.split()[1] not in STD_LIB
-                   and not line.split()[1].startswith(('infogami',
-                                                       'openlibrary'))))
+                   if line.split()[1] not in STD_LIB))
 print('\n'.join(lines))
